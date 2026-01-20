@@ -3,15 +3,21 @@ using UnityEngine.InputSystem;
 
 public class PlayerMovement : MonoBehaviour
 {
-    [SerializeField] float controlSpeed = 3f;
+    [SerializeField] float controlSpeed = 25f;
     [SerializeField] float xClampRange = 20f;
-    [SerializeField] float yClampRange = 20f;
+    [SerializeField] float yClampRange = 15f;
+
+    [SerializeField] float xRotRange = 0f;
+    [SerializeField] float yRotRange = 0f;
+    [SerializeField] float zRotRange = 20f;
+
 
     Vector2 movement;
 
     void Update()
     {
         ProcessTranslation();
+        ProcessRotation();
     }
     
     public void OnMove(InputValue value)
@@ -29,5 +35,13 @@ public class PlayerMovement : MonoBehaviour
         float clampedYPos = Mathf.Clamp(rawYPos, -yClampRange, yClampRange);
 
         transform.localPosition = new Vector3(clampedXPos, clampedYPos, 0f);
+    }
+
+    void ProcessRotation()
+    {
+        Debug.Log("RotationProcess method start");
+        Quaternion targetRotation = Quaternion.Euler(xRotRange, yRotRange, -zRotRange * movement.x);
+        Debug.Log("RotationProcess target rotation: " + targetRotation);
+        transform.localRotation = targetRotation;
     }
 }
