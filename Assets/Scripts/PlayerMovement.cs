@@ -39,9 +39,7 @@ public class PlayerMovement : MonoBehaviour
 
     void ProcessRotation()
     {
-        Debug.Log("RotationProcess method start");
         Quaternion targetRotation = Quaternion.Euler(xRotRange, yRotRange, -zRotRange * movement.x);
-        Debug.Log("RotationProcess target rotation: " + targetRotation);
         transform.localRotation = targetRotation;
     }
 }
