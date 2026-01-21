@@ -1,3 +1,4 @@
+using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.InputSystem;
 
@@ -10,6 +11,7 @@ public class PlayerMovement : MonoBehaviour
     [SerializeField] float xRotRange = 0f;
     [SerializeField] float yRotRange = 0f;
     [SerializeField] float zRotRange = 20f;
+    [SerializeField] float rotationSpeed = 5f;
 
 
     Vector2 movement;
@@ -40,6 +42,6 @@ public class PlayerMovement : MonoBehaviour
     void ProcessRotation()
     {
         Quaternion targetRotation = Quaternion.Euler(xRotRange, yRotRange, -zRotRange * movement.x);
-        transform.localRotation = targetRotation;
+        transform.localRotation = Quaternion.Lerp(transform.localRotation, targetRotation, rotationSpeed * Time.deltaTime);
     }
 }
