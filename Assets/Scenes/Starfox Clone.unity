@@ -438,6 +438,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2d3cdcceed98d884088f68a50d90807f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::PlayerWeapon
+  laser: {fileID: 1710303081}
 --- !u!1 &877071850
 GameObject:
   m_ObjectHideFlags: 0
