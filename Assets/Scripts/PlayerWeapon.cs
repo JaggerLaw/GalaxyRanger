@@ -4,13 +4,8 @@ using UnityEngine.InputSystem;
 
 public class PlayerWeapon : MonoBehaviour
 {
-    [SerializeField] ParticleSystem laser;
+    [SerializeField] ParticleSystem[] lasers;
     bool isFiring = false;
-
-    void Start()
-    {
-
-    }
 
     void Update()
     {
@@ -24,10 +19,10 @@ public class PlayerWeapon : MonoBehaviour
 
     void ProcessFiring()
     {
-        var laserEmissionMod = laser.GetComponent<ParticleSystem>().emission;
-
-        laserEmissionMod.enabled = isFiring;
-
+        foreach (ParticleSystem laser in lasers)
+        {
+            var laserEmissionMod = laser.GetComponent<ParticleSystem>().emission;
+            laserEmissionMod.enabled = isFiring;
+        }
     }
-
 }
