@@ -7,6 +7,11 @@ public class PlayerWeapon : MonoBehaviour
     [SerializeField] RectTransform crosshair;
     bool isFiring = false;
 
+    void Start()
+    {
+        Cursor.visible = false;
+    }
+
     void Update()
     {
         ProcessFiring();
