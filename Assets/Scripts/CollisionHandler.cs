@@ -2,6 +2,7 @@ using UnityEngine;
 
 public class CollisionHandler : MonoBehaviour
 {
+    [SerializeField] ParticleSystem explosionVFX;
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
@@ -16,6 +17,16 @@ public class CollisionHandler : MonoBehaviour
 
     void OnTriggerEnter(Collider other)
     {
-        Debug.Log($"Collided with {other.gameObject.name}");
+        Instantiate(explosionVFX, transform.position, Quaternion.identity);
+        if (!explosionVFX.isPlaying)
+        {
+            explosionVFX.Play();
+        } else
+        {
+            explosionVFX.Stop();
+        }
+
+        Destroy(gameObject);
+
     }
 }
