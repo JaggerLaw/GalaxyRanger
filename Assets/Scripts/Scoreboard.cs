@@ -7,6 +7,5 @@ public class Scoreboard : MonoBehaviour
     public void IncreaseScore(int amount)
     {
         score += amount;
-        Debug.Log("Score: " + score);
     }
 }
