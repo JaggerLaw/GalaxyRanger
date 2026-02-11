@@ -10,11 +10,7 @@ public class DialogueLines : MonoBehaviour
 
     public void NextDialogueLine()
     {
-        // if(currentLine != 0)
-        // {
-        //     currentLine++;
-        // }
-            currentLine++;
+        currentLine++;
         dialogueText.text = timelineTextLines[currentLine];
     }
 }
