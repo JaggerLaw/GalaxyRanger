@@ -454,7 +454,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &305802580
 RectTransform:
   m_ObjectHideFlags: 0
@@ -884,17 +884,25 @@ PlayableDirector:
     value: {fileID: 1760720804}
   m_ExposedReferences:
     m_References:
+    - 2f7f5dc9585def947b56bd98e7531957: {fileID: 1855019906}
+    - 7f8abc698187aa24dbe4f0e6897a4ad5: {fileID: 305802579}
     - ef4f04558f6aa944f945f84d62efdfc7: {fileID: 1930318925}
     - 18e56989f46fab041808214c2580ee59: {fileID: 234648155}
+    - ee4025537ea4f6b49a28091e13ae06c0: {fileID: 305802579}
     - e2db53bda36a70b488519bc9874265d7: {fileID: 881411098}
     - 52ef6f4b7cbe0dd49924928d55c68e8d: {fileID: 881411098}
+    - ac02ed8dc40e6a5478ff7372c99e5065: {fileID: 305802579}
+    - faf3055b438a0a848995daa9ae89f0d2: {fileID: 305802579}
+    - 3b00665b64d12a24bac5be2b17051b16: {fileID: 1855019906}
     - 6ffb08ba8aef3aa4d93a677925d61bc2: {fileID: 881411098}
+    - f94706926b3d182449d653606ea89097: {fileID: 1855019906}
     - 45b5499ccea8b0f43b71fcd30fcda974: {fileID: 881411098}
     - 10c2b0cd7f3dcc24fb12338c846bc670: {fileID: 881411098}
     - 0c2ab714dcefc9d40a473de6f80e447a: {fileID: 881411098}
     - d30b18caa6b501b4192fd35e90f38be5: {fileID: 369589301}
     - aa528de69a6b07e42a52087074eacbf7: {fileID: 881411098}
     - 90f9cbc41d841a444b325ef94e455cc5: {fileID: 881411098}
+    - 2baa178efc619d84684059980eca0e51: {fileID: 305802579}
 --- !u!4 &877071852
 Transform:
   m_ObjectHideFlags: 0
@@ -957,7 +965,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &881411099
 RectTransform:
   m_ObjectHideFlags: 0
